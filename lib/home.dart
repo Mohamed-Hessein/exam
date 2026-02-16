@@ -50,6 +50,10 @@ static const routeName = '/home'
 
                           return BottomSheetCusotm(product: product,);
                         });
+                        Timer(Duration(seconds: 3), (){
+
+                          Navigator.pop(context);
+                        });
 
                       },
                       child: CardCustom(

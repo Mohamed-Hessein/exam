@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:exam/cubit/cubit.dart';
 import 'package:exam/cubit/state.dart';
@@ -70,7 +72,10 @@ int counter = 0;
                             onTap: (){
                               showModalBottomSheet(   context: context, builder: ( context)  =>             BottomSheetCusotm(product: widget.product,));
                         isCLick =!isCLick;
+                        Timer(Duration(seconds: 2), (){
 
+                          Navigator.pop(context);
+                        });
                         setState(() {
 
                         });
